@@ -1,2 +1,2 @@
 # GDM 
-## Universal-Standard-for-Quick-Reference-Libraries
+## Universal Standard for Quick Reference Libraries
