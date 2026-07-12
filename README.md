@@ -2,118 +2,120 @@
 
 ## Gana.dm Universal Standard for Quick Reference Libraries
 
----
-
-# Sobre
-
-GDM-USQRL é uma especificação de organização de dados baseada em arquivos JSON para criação de bibliotecas de consulta rápida.
-
-A especificação define uma estrutura padronizada para organizar informações de forma simples, consistente e acessível.
-
-Não é um aplicativo, programa, linguagem ou plataforma. É uma convenção de estruturação de dados que define como arquivos JSON podem ser organizados para representar bibliotecas de referência rápida.
+> 🇧🇷 Usuários brasileiros: uma versão traduzida deste README está disponível em [Português Brasileiro](translations/pt-br/README.md).
 
 ---
 
-# Objetivo
+# About
 
-A estrutura foi criada para facilitar o armazenamento, organização e consulta de informações.
+GDM-USQRL is a data organization specification based on JSON files for creating quick reference libraries.
 
-O objetivo é permitir que diferentes tipos de conhecimento possam ser organizados seguindo um modelo comum.
+The specification defines a standardized structure for organizing information in a simple, consistent, and accessible way.
 
-A estrutura permite:
-
-- Organização consistente de informações.
-- Consulta rápida de conteúdos específicos.
-- Separação entre organização e dados.
-- Leitura por humanos e aplicações.
-- Reutilização dos dados em diferentes projetos.
+It is not an application, program, language, or platform. It is a data structuring convention that defines how JSON files can be organized to represent quick reference libraries.
 
 ---
 
-# Aplicações
+# Objective
 
-A especificação não é limitada a uma área específica.
+The structure was created to facilitate the storage, organization, and retrieval of information.
 
-Pode ser utilizada para criar bibliotecas de qualquer tipo de conhecimento, incluindo:
+The objective is to allow different types of knowledge to be organized using a common model.
 
-- Documentação técnica.
-- Estudos pessoais.
-- Materiais educacionais.
-- Ciências.
-- História.
-- Idiomas.
-- Referências profissionais.
-- Coleções de informações.
-- Programação e tecnologia.
-- Qualquer outro conjunto organizado de conhecimento.
+The structure enables:
 
-A finalidade da biblioteca depende do objetivo de quem a cria.
+- Consistent organization of information.
+- Quick access to specific content.
+- Separation between organization and data.
+- Human and application-readable information.
+- Data reuse across different projects.
 
 ---
 
-# Conceito
+# Applications
 
-Uma biblioteca de consulta rápida organiza informações para que conteúdos específicos possam ser encontrados de forma eficiente.
+The specification is not limited to a specific area.
 
-A estrutura utiliza uma separação entre:
+It can be used to create libraries for any type of knowledge, including:
 
-- Índices, responsáveis pela organização e navegação.
-- Armazenamento, responsável pelos conteúdos individuais.
+- Technical documentation.
+- Personal studies.
+- Educational materials.
+- Sciences.
+- History.
+- Languages.
+- Professional references.
+- Information collections.
+- Programming and technology.
+- Any other organized set of knowledge.
 
-Essa separação permite que grandes coleções de informações sejam organizadas sem depender de um único arquivo contendo todos os dados.
+The purpose of each library depends on the objective of its creator.
 
 ---
 
-# Estrutura Geral
+# Concept
 
-Uma biblioteca segue uma organização hierárquica:
+A quick reference library organizes information so that specific content can be found efficiently.
 
+The structure uses a separation between:
+
+- Indexes, responsible for organization and navigation.
+- Storage, responsible for individual content.
+
+This separation allows large collections of information to be organized without depending on a single file containing all data.
+
+---
+
+# General Structure
+
+A library follows a hierarchical organization:
+
+```text
+Library
+
+├── Indexes
+
+└── Contents
 ```
-Biblioteca
 
-├── Índices
+The relationship between data follows:
 
-└── Conteúdos
-```
-
-A relação entre os dados segue:
-
-```
-Biblioteca
+```text
+Library
 
 ↓
 
-Grupos
+Groups
 
 ↓
 
-Itens individuais
+Individual items
 ```
 
 ---
 
-# Arquitetura de Arquivos
+# File Architecture
 
-Exemplo de organização:
+Example of organization:
 
-```
-biblioteca/
+```text
+library/
 
 ├── index.json
 
 ├── groups/
 
-│   ├── grupo-1.json
+│   ├── group-1.json
 
-│   ├── grupo-2.json
+│   ├── group-2.json
 
-│   └── grupo-3.json
+│   └── group-3.json
 
 └── storage/
 
-    └── nome-da-biblioteca/
+    └── library-name/
 
-        ├── nome-do-grupo/
+        ├── group-name/
 
         │   ├── item-001.json
 
@@ -126,122 +128,122 @@ biblioteca/
 
 # Index
 
-O arquivo principal `index.json` contém informações gerais da biblioteca.
+The main `index.json` file contains general information about the library.
 
-Ele pode definir:
+It can define:
 
-- Identificação da biblioteca.
-- Informações gerais.
-- Localização dos grupos.
-- Relações principais da estrutura.
+- Library identification.
+- General information.
+- Group locations.
+- Main structural relationships.
 
 ---
 
-# Grupos
+# Groups
 
-Os grupos representam divisões internas utilizadas para organizar conteúdos relacionados.
+Groups represent internal divisions used to organize related content.
 
-Eles funcionam como índices intermediários entre a biblioteca e os itens individuais.
+They work as intermediate indexes between the library and individual items.
 
-Exemplo:
+Example:
 
+```text
+Library
+
+├── Group A
+
+├── Group B
+
+└── Group C
 ```
-Biblioteca
 
-├── Grupo A
-
-├── Grupo B
-
-└── Grupo C
-```
-
-Cada grupo possui informações que permitem localizar e organizar seus respectivos itens.
+Each group contains information that allows its respective items to be located and organized.
 
 ---
 
 # Storage
 
-A pasta `storage` contém os arquivos individuais com os conteúdos completos.
+The `storage` directory contains individual files with the complete content of each item.
 
-A organização segue:
+The organization follows:
 
-```
+```text
 storage/
 
-└── biblioteca/
+└── library/
 
-    └── grupo/
+    └── group/
 
         └── item.json
 ```
 
-Cada arquivo representa uma unidade independente de informação.
+Each file represents an independent unit of information.
 
 ---
 
-# Itens
+# Items
 
-Os itens representam a menor unidade de informação dentro da estrutura.
+Items represent the smallest unit of information within the structure.
 
-Um item pode representar qualquer tipo de conteúdo:
+An item can represent any type of content:
 
-- Conceito.
-- Referência.
-- Definição.
-- Elemento.
-- Comando.
-- Informação específica.
-- Registro de conhecimento.
+- Concept.
+- Reference.
+- Definition.
+- Element.
+- Command.
+- Specific information.
+- Knowledge record.
 
-Exemplo:
+Example:
 
 ```json
 {
   "id": "example-item",
-  "title": "Título do item",
-  "subtitle": "Informação complementar",
-  "description": "Descrição do conteúdo."
+  "title": "Item title",
+  "subtitle": "Additional information",
+  "description": "Content description."
 }
 ```
 
 ---
 
-# Separação entre Estrutura e Conteúdo
+# Separation Between Structure and Content
 
-A organização diferencia duas partes principais.
+The organization separates two main parts.
 
-## Estrutura
+## Structure
 
-Responsável por:
+Responsible for:
 
-- Índices.
-- Grupos.
-- Referências.
-- Caminhos dos arquivos.
-- Organização da biblioteca.
+- Indexes.
+- Groups.
+- References.
+- File paths.
+- Library organization.
 
-## Conteúdo
+## Content
 
-Responsável por:
+Responsible for:
 
-- Títulos.
-- Descrições.
-- Exemplos.
-- Informações específicas dos itens.
+- Titles.
+- Descriptions.
+- Examples.
+- Specific item information.
 
-Essa separação permite que diferentes aplicações utilizem os mesmos dados.
+This separation allows different applications to use the same data.
 
 ---
 
-# Dados Técnicos e Conteúdo Natural
+# Technical Data and Natural Content
 
-Os arquivos possuem informações destinadas a diferentes objetivos.
+The files contain information intended for different purposes.
 
-## Dados Técnicos
+## Technical Data
 
-Utilizados para identificação, referência e organização.
+Used for identification, reference, and organization.
 
-Exemplo:
+Example:
 
 ```json
 {
@@ -249,53 +251,53 @@ Exemplo:
 }
 ```
 
-## Conteúdo Natural
+## Natural Content
 
-Utilizado para apresentar informações compreensíveis para pessoas.
+Used to present information in a way that is understandable to people.
 
-Exemplo:
+Example:
 
 ```json
 {
-  "title": "Título do item",
-  "description": "Descrição do conteúdo."
+  "title": "Item title",
+  "description": "Content description."
 }
 ```
 
-Os campos técnicos seguem uma estrutura definida pela especificação.
+Technical fields follow a structure defined by the specification.
 
-Os conteúdos textuais podem ser escritos no idioma escolhido pelo criador da biblioteca.
-
----
-
-# Idioma
-
-A especificação não define um idioma obrigatório.
-
-Cada biblioteca pode utilizar o idioma mais adequado ao seu objetivo, público ou contexto.
-
-Uma biblioteca pode ser:
-
-- Pessoal.
-- Interna de um projeto.
-- Pública.
-- Destinada a uma comunidade específica.
-- Multilíngue, quando necessário.
-
-A criação de traduções é opcional.
-
-A universalidade está na estrutura dos dados, não no idioma utilizado.
+Textual content can be written in the language chosen by the library creator.
 
 ---
 
-# Compatibilidade
+# Language
 
-Qualquer aplicação capaz de interpretar arquivos JSON seguindo a estrutura definida pode utilizar uma biblioteca compatível.
+The specification does not define a mandatory language.
 
-A especificação permite diferentes implementações sem depender de uma aplicação específica.
+Each library can use the language most appropriate for its purpose, audience, or context.
+
+A library can be:
+
+- Personal.
+- Internal to a project.
+- Public.
+- Intended for a specific community.
+- Multilingual when necessary.
+
+Creating translations is optional.
+
+The universality comes from the data structure, not from the language used.
 
 ---
 
-# Licença
+# Compatibility
 
-GDM-USQRL é uma especificação aberta para organização de bibliotecas de consulta rápida utilizando arquivos JSON.
+Any application capable of interpreting JSON files according to the defined structure can use a compatible library.
+
+The specification allows different implementations without depending on a specific application.
+
+---
+
+# License
+
+GDM-USQRL is an open specification for organizing quick reference libraries using JSON files.
