@@ -1,301 +1,320 @@
 # GDM-USQRL
 
-## Gana.dm Universal Standard for Quick Reference Libraries
+Gana.DM Universal Standard for Quick Reference Libraries
+
+**Uma linguagem de organização e marcação semântica do conhecimento.**
+
+*Padronizando a forma de organizar o conhecimento.*
 
 ---
 
-# Sobre
+## O que é o GDM-USQRL?
 
-GDM-USQRL é uma especificação de organização de dados baseada em arquivos JSON para criação de bibliotecas de consulta rápida.
+O **GDM-USQRL (Gana.DM Universal Standard for Quick Reference Libraries)** é uma linguagem de organização e marcação semântica do conhecimento.
 
-A especificação define uma estrutura padronizada para organizar informações de forma simples, consistente e acessível.
+Seu objetivo é estabelecer um padrão para estruturar informações de forma consistente, permitindo que diferentes áreas do conhecimento sejam organizadas seguindo a mesma lógica.
 
-Não é um aplicativo, programa, linguagem ou plataforma. É uma convenção de estruturação de dados que define como arquivos JSON podem ser organizados para representar bibliotecas de referência rápida.
-
----
-
-# Objetivo
-
-A estrutura foi criada para facilitar o armazenamento, organização e consulta de informações.
-
-O objetivo é permitir que diferentes tipos de conhecimento possam ser organizados seguindo um modelo comum.
-
-A estrutura permite:
-
-- Organização consistente de informações.
-- Consulta rápida de conteúdos específicos.
-- Separação entre organização e dados.
-- Leitura por humanos e aplicações.
-- Reutilização dos dados em diferentes projetos.
+Em vez de descrever como uma informação deve ser apresentada visualmente, o GDM-USQRL descreve **o significado e a organização** do conhecimento, tornando-o previsível, reutilizável e independente de qualquer aplicação específica.
 
 ---
 
-# Aplicações
+## O problema
 
-A especificação não é limitada a uma área específica.
+O conhecimento pode ser adquirido, revisado e aprofundado ao longo de toda a vida. Entretanto, a forma como ele é organizado costuma variar conforme a ferramenta utilizada, o autor ou o momento em que foi produzido.
 
-Pode ser utilizada para criar bibliotecas de qualquer tipo de conhecimento, incluindo:
+Documentos de texto, anotações, wikis e outros formatos permitem registrar informações, mas normalmente não estabelecem um padrão comum de organização. Como consequência, cada coleção de conteúdo passa a possuir sua própria estrutura, tornando mais difícil localizar informações específicas, revisar assuntos já estudados e reutilizar o conhecimento ao longo do tempo.
 
-- Documentação técnica.
-- Estudos pessoais.
-- Materiais educacionais.
-- Ciências.
-- História.
-- Idiomas.
-- Referências profissionais.
-- Coleções de informações.
-- Programação e tecnologia.
-- Qualquer outro conjunto organizado de conhecimento.
-
-A finalidade da biblioteca depende do objetivo de quem a cria.
+À medida que a quantidade de conteúdo cresce, também cresce a dificuldade de lembrar onde determinada informação foi registrada. Muitas vezes, o conhecimento continua disponível, mas sua localização depende da memória de quem o organizou.
 
 ---
 
-# Conceito
+## A solução
 
-Uma biblioteca de consulta rápida organiza informações para que conteúdos específicos possam ser encontrados de forma eficiente.
+O GDM-USQRL propõe uma abordagem diferente para a organização do conhecimento: em vez de padronizar o conteúdo, ele padroniza a forma como esse conteúdo é estruturado.
 
-A estrutura utiliza uma separação entre:
+Ao definir uma organização semântica consistente, a linguagem permite que documentos de diferentes áreas do conhecimento compartilhem a mesma lógica estrutural. Isso torna a localização de informações mais previsível, facilita a revisão de conteúdos e reduz a dependência da memória sobre como cada coleção foi organizada.
 
-- Índices, responsáveis pela organização e navegação.
-- Armazenamento, responsável pelos conteúdos individuais.
-
-Essa separação permite que grandes coleções de informações sejam organizadas sem depender de um único arquivo contendo todos os dados.
+Com uma estrutura comum, o usuário aprende o padrão uma única vez e pode aplicá-lo a qualquer biblioteca compatível, independentemente do tema abordado.
 
 ---
 
-# Estrutura Geral
+## Filosofia da linguagem
 
-Uma biblioteca segue uma organização hierárquica:
+O GDM-USQRL possui como princípio fundamental a separação entre conhecimento e apresentação.
 
-```
-Biblioteca
+A linguagem não define como uma informação deve ser exibida, mas como ela deve ser organizada e identificada semanticamente. A responsabilidade pela apresentação pertence às ferramentas que interpretam a linguagem.
 
-├── Índices
+O objetivo do GDM-USQRL não é substituir o conhecimento existente, mas criar uma estrutura que permita organizá-lo de maneira consistente, tornando sua consulta, revisão e expansão mais eficientes ao longo do tempo.
 
-└── Conteúdos
-```
+> **O GDM-USQRL não padroniza o conhecimento; ele padroniza a forma de organizar o conhecimento.**
 
-A relação entre os dados segue:
+A padronização da organização funciona como um sistema de localização. Assim como uma pessoa sabe onde encontrar uma chave porque sempre a coloca no mesmo lugar, um usuário de uma biblioteca organizada com GDM-USQRL sabe onde procurar uma informação porque ela segue uma estrutura conhecida.
 
-```
-Biblioteca
-
-↓
-
-Grupos
-
-↓
-
-Itens individuais
-```
+O valor da linguagem está na previsibilidade da organização, permitindo que o conhecimento continue acessível mesmo quando a memória sobre seu conteúdo ou localização diminui com o passar do tempo.
 
 ---
 
-# Arquitetura de Arquivos
+## Características
 
-Exemplo de organização:
+### Organização semântica
 
-```
-biblioteca/
+O GDM-USQRL organiza informações com base no significado de cada elemento, permitindo que o conhecimento seja estruturado de forma clara e consistente.
 
-├── index.json
+### Independência de apresentação
 
-├── groups/
+A linguagem descreve a estrutura do conhecimento, não sua aparência visual. Diferentes ferramentas podem interpretar a mesma informação de maneiras distintas.
 
-│   ├── grupo-1.json
+### Independência de domínio
 
-│   ├── grupo-2.json
+O GDM-USQRL pode ser utilizado para organizar conhecimentos de diferentes áreas, sem depender de um tema específico.
 
-│   └── grupo-3.json
+Exemplos:
 
-└── storage/
+- Programação
+- Filosofia
+- Matemática
+- História
+- Medicina
+- Culinária
+- Documentação técnica
 
-    └── nome-da-biblioteca/
+### Estrutura padronizada
 
-        ├── nome-do-grupo/
+Documentos criados utilizando a linguagem seguem uma organização comum, facilitando localização, revisão e reutilização do conhecimento.
 
-        │   ├── item-001.json
+### Extensibilidade
 
-        │   ├── item-002.json
+A linguagem pode evoluir e receber novos elementos e funcionalidades sem perder sua estrutura fundamental.
 
-        │   └── item-003.json
-```
+### Compatibilidade
 
----
+Por utilizar uma estrutura baseada em dados, diferentes ferramentas podem criar, interpretar e validar conteúdos compatíveis com o padrão.
 
-# Index
+### Organização orientada ao longo prazo
 
-O arquivo principal `index.json` contém informações gerais da biblioteca.
-
-Ele pode definir:
-
-- Identificação da biblioteca.
-- Informações gerais.
-- Localização dos grupos.
-- Relações principais da estrutura.
+O GDM-USQRL é projetado considerando que o conhecimento pode ser consultado novamente anos depois, mantendo sua estrutura compreensível mesmo após longos períodos de tempo.
 
 ---
 
-# Grupos
+## Casos de uso
 
-Os grupos representam divisões internas utilizadas para organizar conteúdos relacionados.
+O GDM-USQRL pode ser utilizado para organizar qualquer tipo de conhecimento que necessite de uma estrutura consistente, pesquisável e reutilizável.
 
-Eles funcionam como índices intermediários entre a biblioteca e os itens individuais.
+### Educação
 
-Exemplo:
+Criação de materiais de estudo, cursos, guias e bases de conhecimento educacionais.
 
-```
-Biblioteca
+Exemplos:
 
-├── Grupo A
+- Aulas
+- Resumos
+- Conceitos
+- Exercícios
+- Referências
 
-├── Grupo B
+### Tecnologia e programação
 
-└── Grupo C
-```
+Organização de documentação técnica e conhecimento relacionado ao desenvolvimento de software.
 
-Cada grupo possui informações que permitem localizar e organizar seus respectivos itens.
+Exemplos:
+
+- Linguagens de programação
+- Bibliotecas
+- Frameworks
+- Comandos
+- Guias técnicos
+
+### Pesquisa e estudo pessoal
+
+Construção de sistemas pessoais de organização de conhecimento.
+
+Exemplos:
+
+- Anotações de estudo
+- Pesquisas
+- Revisões
+- Referências futuras
+
+### Documentação profissional
+
+Criação de manuais, procedimentos e bases internas de conhecimento.
+
+Exemplos:
+
+- Documentação de empresas
+- Processos internos
+- Guias operacionais
+
+### Conhecimento especializado
+
+Organização de conteúdos de áreas específicas.
+
+Exemplos:
+
+- Filosofia
+- História
+- Medicina
+- Direito
+- Engenharia
+- Culinária
+
+### Projetos criativos
+
+Estruturação de universos e informações complexas.
+
+Exemplos:
+
+- RPG
+- Construção de mundos
+- Narrativas
+- Enciclopédias fictícias
 
 ---
 
-# Storage
+## Ecossistema GDM
 
-A pasta `storage` contém os arquivos individuais com os conteúdos completos.
+O GDM-USQRL é o núcleo de um ecossistema de ferramentas e formatos desenvolvidos para trabalhar com conhecimento estruturado.
 
-A organização segue:
+A linguagem define como o conhecimento é organizado semanticamente. A partir dela, outros componentes podem ser desenvolvidos para armazenar, distribuir, editar, validar e interpretar esse conhecimento.
 
 ```
-storage/
-
-└── biblioteca/
-
-    └── grupo/
-
-        └── item.json
+GDM-USQRL
+     │
+     ▼
+Formatos e bibliotecas compatíveis
+     │
+     ▼
+Ferramentas de interpretação e utilização
 ```
 
-Cada arquivo representa uma unidade independente de informação.
+O GDM-USQRL não depende de uma aplicação específica. Qualquer ferramenta compatível pode utilizar a linguagem seguindo esta especificação.
+
+O projeto Gana.DM é uma das primeiras implementações criadas para interpretar e utilizar conteúdos estruturados com GDM-USQRL, mas a linguagem permanece independente de qualquer aplicação individual.
 
 ---
 
-# Itens
+## Exemplo simples
 
-Os itens representam a menor unidade de informação dentro da estrutura.
+Um documento GDM-USQRL é formado por elementos que representam partes do conhecimento.
 
-Um item pode representar qualquer tipo de conteúdo:
+Esses elementos descrevem a estrutura e o significado das informações, permitindo que diferentes tipos de conteúdo sejam organizados utilizando o mesmo padrão.
 
-- Conceito.
-- Referência.
-- Definição.
-- Elemento.
-- Comando.
-- Informação específica.
-- Registro de conhecimento.
-
-Exemplo:
+Exemplo conceitual:
 
 ```json
 {
-  "id": "example-item",
-  "title": "Título do item",
-  "subtitle": "Informação complementar",
-  "description": "Descrição do conteúdo."
+  "conteudo": [
+    {
+      "tipo": "titulo",
+      "texto": "Bolo de Chocolate"
+    },
+    {
+      "tipo": "descricao",
+      "texto": "Uma receita simples de bolo de chocolate."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Ingredientes",
+      "itens": [
+        "Farinha",
+        "Chocolate",
+        "Ovos",
+        "Leite"
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Modo de preparo",
+      "itens": [
+        "Misturar os ingredientes",
+        "Preparar a massa",
+        "Levar ao forno"
+      ]
+    }
+  ]
 }
 ```
 
----
+Neste exemplo, o GDM-USQRL não define uma aparência visual para a receita.
 
-# Separação entre Estrutura e Conteúdo
+Ele apenas informa que o documento possui:
 
-A organização diferencia duas partes principais.
+- um título;
+- uma descrição;
+- conjuntos de informações organizadas em listas.
 
-## Estrutura
+A mesma estrutura poderia ser utilizada para diferentes áreas do conhecimento.
 
-Responsável por:
-
-- Índices.
-- Grupos.
-- Referências.
-- Caminhos dos arquivos.
-- Organização da biblioteca.
-
-## Conteúdo
-
-Responsável por:
-
-- Títulos.
-- Descrições.
-- Exemplos.
-- Informações específicas dos itens.
-
-Essa separação permite que diferentes aplicações utilizem os mesmos dados.
+O significado final depende do conteúdo organizado, enquanto a estrutura permanece padronizada.
 
 ---
 
-# Dados Técnicos e Conteúdo Natural
+## Objetivos do projeto
 
-Os arquivos possuem informações destinadas a diferentes objetivos.
+O objetivo do GDM-USQRL é criar um padrão aberto para organização e marcação semântica do conhecimento, permitindo que informações possam ser estruturadas, compartilhadas e reutilizadas de forma consistente.
 
-## Dados Técnicos
+A longo prazo, o projeto busca estabelecer uma linguagem capaz de servir como base para diferentes ferramentas e aplicações voltadas à criação, organização, distribuição e interpretação de conhecimento estruturado.
 
-Utilizados para identificação, referência e organização.
+Entre seus objetivos estão:
 
-Exemplo:
-
-```json
-{
-  "id": "example-item"
-}
-```
-
-## Conteúdo Natural
-
-Utilizado para apresentar informações compreensíveis para pessoas.
-
-Exemplo:
-
-```json
-{
-  "title": "Título do item",
-  "description": "Descrição do conteúdo."
-}
-```
-
-Os campos técnicos seguem uma estrutura definida pela especificação.
-
-Os conteúdos textuais podem ser escritos no idioma escolhido pelo criador da biblioteca.
+- Criar uma forma universal de organizar conhecimento.
+- Permitir que diferentes áreas utilizem uma estrutura comum.
+- Facilitar a revisão e reutilização de informações ao longo do tempo.
+- Separar o significado do conhecimento de sua forma de apresentação.
+- Incentivar a criação de ferramentas compatíveis com o padrão.
+- Construir um ecossistema aberto baseado em uma linguagem compartilhada.
 
 ---
 
-# Idioma
+## Estado do projeto
 
-A especificação não define um idioma obrigatório.
+O GDM-USQRL está em fase de desenvolvimento e definição da sua especificação.
 
-Cada biblioteca pode utilizar o idioma mais adequado ao seu objetivo, público ou contexto.
+Atualmente, o projeto está concentrado na criação da estrutura fundamental da linguagem, incluindo:
 
-Uma biblioteca pode ser:
+- definição dos princípios da linguagem;
+- organização do modelo de documentos;
+- definição dos elementos semânticos;
+- criação das regras de validação;
+- desenvolvimento do JSON Schema;
+- documentação da especificação.
 
-- Pessoal.
-- Interna de um projeto.
-- Pública.
-- Destinada a uma comunidade específica.
-- Multilíngue, quando necessário.
-
-A criação de traduções é opcional.
-
-A universalidade está na estrutura dos dados, não no idioma utilizado.
+A especificação ainda está em evolução. Decisões futuras poderão ampliar a linguagem, mantendo como prioridade seus princípios fundamentais: organização semântica, independência de apresentação e padronização da estrutura do conhecimento.
 
 ---
 
-# Compatibilidade
+## Documentação
 
-Qualquer aplicação capaz de interpretar arquivos JSON seguindo a estrutura definida pode utilizar uma biblioteca compatível.
+A documentação do GDM-USQRL é dividida em diferentes níveis para atender diferentes necessidades.
 
-A especificação permite diferentes implementações sem depender de uma aplicação específica.
+### Introdução
+
+Apresenta a proposta, filosofia e objetivos da linguagem.
+
+### Especificação
+
+Define as regras técnicas do GDM-USQRL, incluindo:
+
+- estrutura dos documentos;
+- elementos da linguagem;
+- propriedades;
+- regras de validação;
+- compatibilidade entre versões.
+
+### Schema
+
+Contém os arquivos de validação utilizados para auxiliar no desenvolvimento de documentos compatíveis com o padrão.
+
+### Exemplos
+
+Apresenta bibliotecas e documentos de demonstração para facilitar o entendimento da linguagem.
 
 ---
 
-# Licença
+## Licença
 
-GDM-USQRL é uma especificação aberta para organização de bibliotecas de consulta rápida utilizando arquivos JSON.
+O GDM-USQRL é um projeto de especificação aberta.
+
+A utilização, implementação e criação de ferramentas compatíveis com o padrão são incentivadas, desde que respeitem os termos definidos pela licença do projeto.
+
+A licença oficial será definida durante a publicação do projeto.
