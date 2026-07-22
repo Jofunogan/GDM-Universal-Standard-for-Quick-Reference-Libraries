@@ -1,6 +1,6 @@
 # GDM-USQRL
 
-Gana.DM Padrão Universal para Bibliotecas de Consulta Rápida 
+Gana.DM Universal Standard for Quick Reference(Padrão Universal para Bibliotecas de Consulta Rápida)
 
 **Uma linguagem de organização e marcação semântica do conhecimento.**
 
